@@ -118,17 +118,18 @@ echo '<br><br>';
 //Créer un tableau pour les mois de l'année et affiché tous les mois de Janvier à Décembre
 //modifier et/ou remplacer les éléments ci-dessous
 echo "8.Les mois depuis le debut de l'annee : <br>";
-$mois = [];
-for ($i = 0; $i < 0; $i) {
-    echo '';
+$mois = ["j", "f", "m","a", "m", "j", "jj","aa", "s", "o", "n", "d"];
+for ($i = 0; $i < count($mois); $i++) {
+    echo $mois[$i] . " - ";
 }
 echo '<br><br>';
 
 //Afficher les mois de la fin de l'année jusqu'au début de l'année
 //modifier et/ou remplacer les éléments ci-dessous
 echo "9.Les mois depuis la fin de l'annee : <br>";
-for ($i = 0; $i < 0; $i) {
-    echo '';
+$okkkm = array_reverse($mois);
+for ($i = 0; $i < count($okkkm); $i++) {
+    echo $okkkm[$i] . " - ";
 }
 echo '<br><br>';
 
@@ -137,28 +138,41 @@ echo '<br><br>';
 //Afficher le nom et prénoms des élèves de ce collège
 $college = array(
   'Sixieme' => array(
-    array('Nom' => 'Payet', 'Prenom' => 'Mickael'),
-    array('Nom' => 'Hoareau', 'Prenom' => 'Christine'),
-    array('Nom' => 'Maillot', 'Prenom' => 'Laure'),
+    array('Nom' => 'a', 'Prenom' => 'serdfy'),
+    array('Nom' => 'b', 'Prenom' => 'lfyug'),
+    array('Nom' => 'c', 'Prenom' => 'ugm'),
   ),
   'Cinquieme' => array(
-    array('Nom' => 'Bourdon', 'Prenom' => 'Didier'),
-    array('Nom' => 'Legitimus', 'Prenom' => 'Pascal'),
-    array('Nom' => 'Campan', 'Prenom' => 'Bernard'),
-    array('Nom' => 'Fois', 'Prenom' => 'Marina'),
-    array('Nom' => 'Floresti', 'Prenom' => 'Florence'),
+    array('Nom' => 'd', 'Prenom' => 'rythr'),
+    array('Nom' => 'e', 'Prenom' => 'rzhyrzl'),
+    array('Nom' => 'f', 'Prenom' => 'zhtrzd'),
+    array('Nom' => 'g', 'Prenom' => 'jyutej'),
+    array('Nom' => 'h', 'Prenom' => 'tyjeytj'),
   ),
   'Quatrieme' => array(
-    array('Nom' => 'Willis', 'Prenom' => 'Bruce'),
-    array('Nom' => 'Lawrence', 'Prenom' => 'Laurence'),
-    array('Nom' => 'Johannson', 'Prenom' => 'Scarlett'),
-    array('Nom' => 'Jackson', 'Prenom' => 'Samuel'),
+    array('Nom' => 'i', 'Prenom' => 'tyjtjy'),
+    array('Nom' => 'j', 'Prenom' => 'teyjjy'),
+    array('Nom' => 'k', 'Prenom' => 'fhgdfdht'),
+    array('Nom' => 'l', 'Prenom' => 'tyhjel'),
   ),
 );
 
 echo '10.Les eleves du college : <br>';
 //ajoutez votre code ici
 echo '<br><br>';
+foreach ($college as $gamme => $vehicule) {
+    echo '<br>'.$gamme;
+    foreach ($vehicule as $propriete => $valeur) {
+        echo $propriete.' : '.$valeur.'<br>';
+    }
+}
+
+$num = count($college);
+for ($i = 0; $i < $num; ++$i) {
+    for ($j = 0; $j < count($college[$i]); ++$j) {
+        echo $college[$i][$j].'<br>';
+    }
+}
 
 //----------------------------------------
 //Afficher le nom et prénoms des élèves de ce collège
@@ -175,7 +189,7 @@ $videotheque = array(
     'date' => 1996,
     'realisateur' => 'Roland Emmerich',
     'acteurs' => array(
-      'Will Smith', 'Bill Pullman', 'Jeff Goldblum', 'Mary McDonnell',
+      'Will Smith', 'Bill Pullman', 'Jeff Goldblum', 'ih McDonnell',
     ),
   ),
   array(
@@ -197,7 +211,7 @@ $videotheque = array(
   array(
     'nom' => '12 hommes en colere',
     'date' => 1957,
-    'realisateur' => 'Sidney Lumet',
+    'realisateur' => 'Sid Lumet',
     'acteurs' => array(
       	'Henry Fonda','Martin Balsam','John Fiedler','Lee J. Cobb','E.G. Marshall',
     ),
