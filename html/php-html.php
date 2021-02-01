@@ -14,6 +14,9 @@
      <ul>
        <?php
           // TODO Display the students here, each student inside a new <li> element
+            foreach ($students as $truc){
+                echo $truc . ", ";
+            }
        ?>
      </ul>
      <hr>
@@ -23,29 +26,32 @@
        <!-- Instructions : Créer la liste de jour (en chiffres), de mois (en chiffres) et d'année en PHP. -->
        <label for="day">Day</label>
        <select  name="day" id="day"><?php
-           // TODO list of day ?>
+           // TODO list of day
+           $day = [1,2,3,4,5,6,7];
+           $mois = [1,2,3,4,5,6,7];
+           $year = [1,2,3,4,5,6,7];
+           foreach ($day as $val){
+               echo '<option value='.$val .'>'. $val . '</option>';
+           }
+           ?>
        </select>
        <label for="month">Month</label>
        <select  name="month" id="month"><?php
-           // TODO list of month ?>
+           // TODO list of month
+           foreach ($mois as $val){
+               echo '<option value='.$val .'>'. $val . '</option>';
+           }
+           ?>
        </select>
        <label for="year">Year</label>
        <select  name="year" id="year"><?php
-           // TODO list of year ?>
+           // TODO list of year
+           foreach ($year as $val){
+               echo '<option value='.$val .'>'. $val . '</option>';
+           }
+           ?>
        </select>
      </form>
      <hr>
-     <!-- TODO Instruction : Afficher ce bloc que si dans l'URL il y'a une variable sexe et que ça valeur vaut "fille" -->
-     <p>
-       Je suis une fille
-     </p>
-     <!-- TODO Instruction : Afficher ce bloc que si dans l'URL il y'a une variable sexe et que ça valeur vaut "garçon" -->
-     <p>
-       Je suis un garçon
-     </p>
-     <!-- TODO Instruction : Afficher ce bloc dans les autres cas -->
-     <p>
-       Je suis indéfini
-     </p>
   </body>
 </html>

@@ -159,20 +159,13 @@ $college = array(
 
 echo '10.Les eleves du college : <br>';
 //ajoutez votre code ici
-echo '<br><br>';
 foreach ($college as $gamme => $vehicule) {
     echo '<br>'.$gamme;
     foreach ($vehicule as $propriete => $valeur) {
         echo $propriete.' : '.$valeur.'<br>';
     }
 }
-
-$num = count($college);
-for ($i = 0; $i < $num; ++$i) {
-    for ($j = 0; $j < count($college[$i]); ++$j) {
-        echo $college[$i][$j].'<br>';
-    }
-}
+echo '<br><br>';
 
 //----------------------------------------
 //Afficher le nom et prénoms des élèves de ce collège
