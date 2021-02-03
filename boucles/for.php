@@ -162,7 +162,9 @@ echo '10.Les eleves du college : <br>';
 foreach ($college as $gamme => $vehicule) {
     echo '<br>'.$gamme;
     foreach ($vehicule as $propriete => $valeur) {
-        echo $propriete.' : '.$valeur.'<br>';
+        foreach ($valeur as $pro => $va) {
+            echo $pro.' : '.$va.'<br>';
+        }
     }
 }
 echo '<br><br>';
@@ -213,6 +215,11 @@ $videotheque = array(
 
 echo '12.Mes films : <br>';
 //ajoutez votre code ici
+foreach ($videotheque as $liste) {
+    foreach ($liste as $item){
+        echo $item['nom'];
+    }
+}
 echo '<br><br>';
 
 //----------------------------------------
